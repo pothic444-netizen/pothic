@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gothic Cam - Pro Edition</title>
+    <link rel="stylesheet" href="photo.css">
+</head>
+<body>
+    <div id="flash"></div>
+
+    <div class="container">
+        <h1>GOTHIC CAM</h1>
+        
+        <div class="stage">
+            <div id="camera-area">
+                <div class="camera-box">
+                    <div id="countdown-display"></div>
+                    <video id="video" autoplay playsinline style="display:none;"></video>
+                    <canvas id="liveCanvas"></canvas>
+                </div>
+                <div class="controls">
+                    <select id="filterSelect">
+                        <optgroup label="--- GEOMETRIC & MIRROR ---">
+                            <option value="none">Normal Mirror</option>
+                            <option value="left-mirror">Left Mirror</option>
+                            <option value="right-mirror">Right Mirror</option>
+                            <option value="top-mirror">Top Mirror</option>
+                            <option value="quad-mirror">Quad Mirror (4 Way)</option>
+                            <option value="upside-down">Upside Down</option>
+                        </optgroup>
+                        <optgroup label="--- GOTHIC & HORROR ---">
+                            <option value="noir">Noir (Classic B&W)</option>
+                            <option value="coffin">Coffin (Deep Dark)</option>
+                            <option value="blood">Crimson Red</option>
+                            <option value="ghost">Spectral (Invert)</option>
+                            <option value="demon">Hellfire</option>
+                            <option value="voodoo">Voodoo</option>
+                        </optgroup>
+                        <optgroup label="--- CINEMATIC & MOVIE ---">
+                            <option value="hollywood">Hollywood</option>
+                            <option value="western">Old Western</option>
+                            <option value="slasher">80s Slasher</option>
+                            <option value="silent-film">1920s Silent</option>
+                        </optgroup>
+                        <optgroup label="--- CYBER & FUTURISTIC ---">
+                            <option value="cyber">Cyberpunk</option>
+                            <option value="matrix">Matrix Green</option>
+                            <option value="thermal">Thermal Vision</option>
+                            <option value="glitch-static">Digital Glitch</option>
+                        </optgroup>
+                    </select>
+                    <button id="snap">TAKE A PHOTO</button>
+                </div>
+                <div class="options-container">
+                    <label><input type="checkbox" id="useTimer"> Timer (3s)</label>
+                    <label><input type="checkbox" id="useFlash" checked> Flash</label>
+                </div>
+            </div>
+
+            <div id="preview-area" style="display: none;">
+                <div class="camera-box">
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div class="controls">
+                    <button id="deleteBtn" class="btn-danger">DELETE</button>
+                    <button id="actionBtn" class="btn-success">DOWNLOAD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="photo.js"></script>
+</body>
+</html>
